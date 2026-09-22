@@ -980,103 +980,6 @@ body {
     width: 100%;
   }
 }
-/* ================================
-   PRELOADER
-================================ */
-
-.preloader {
-  position: fixed;
-  inset: 0;
-
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #0b0d14;
-
-  z-index: 99999;
-
-  opacity: 1;
-  visibility: visible;
-
-  transition:
-    opacity 0.7s ease,
-    visibility 0.7s ease;
-}
-
-.preloader.hide {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.preloader-content {
-  width: min(420px, 85%);
-  text-align: center;
-}
-
-.preloader-name {
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 30px;
-
-  color: white;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: 5px;
-}
-
-.loader-line {
-  width: 100%;
-  height: 3px;
-
-  overflow: hidden;
-
-  background: #272a38;
-  border-radius: 10px;
-}
-
-.loader-progress {
-  width: 0;
-  height: 100%;
-
-  background: #7c5cff;
-
-  animation: loaderProgress 2.2s ease forwards;
-}
-
-.preloader-content p {
-  margin-top: 20px;
-
-  color: #858b9c;
-  font-size: 12px;
-  letter-spacing: 3px;
-}
-
-@keyframes loaderProgress {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-
-.portofolio-hidden {
-  visibility: hidden;
-}
-
-.portofolio-show {
-  visibility: visible;
-}
-
 @media (max-width: 900px) {
   .navbar {
     width: 100%;
@@ -1456,7 +1359,26 @@ body {
   .contact-container::before {
     display: none;
   }
+
+
+  .preloader-content {
+    width: min(420px, calc(100% - 40px));
+  }
+
+  .preloader-name {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  .preloader-content p {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
 }
+
+/* =================================
+   SCROLL REVEAL
+================================= */
 
 .scroll-reveal {
   opacity: 0;
@@ -1477,17 +1399,13 @@ body {
 }
 
 .project-card,
-.skill-card,
-.experience-content,
-.education-card {
+.skill-card {
   transform-origin: center bottom;
   will-change: opacity, transform;
 }
 
 .project-card.scroll-reveal,
-.skill-card.scroll-reveal,
-.experience-content.scroll-reveal,
-.education-card.scroll-reveal {
+.skill-card.scroll-reveal {
   opacity: 0;
   transform: translateY(70px) rotateX(6deg);
 
@@ -1497,9 +1415,7 @@ body {
 }
 
 .project-card.scroll-visible,
-.skill-card.scroll-visible,
-.experience-content.scroll-visible,
-.education-card.scroll-visible {
+.skill-card.scroll-visible {
   opacity: 1;
   transform: translateY(0) rotateX(0);
 }
@@ -1519,28 +1435,13 @@ body {
   transition-delay: 0.24s;
 }
 
-.experience-item:nth-child(2) .experience-content {
-  transition-delay: 0.12s;
-}
-
-.experience-item:nth-child(3) .experience-content {
-  transition-delay: 0.24s;
-}
-
-.experience-item:nth-child(4) .experience-content {
-  transition-delay: 0.36s;
-}
-
 @media (max-width: 600px) {
   .scroll-reveal {
     transform: translateY(65px) rotateX(5deg);
-    transition-duration: 0.75s;
   }
 
   .project-card.scroll-reveal,
-  .skill-card.scroll-reveal,
-  .experience-content.scroll-reveal,
-  .education-card.scroll-reveal {
+  .skill-card.scroll-reveal {
     transform: translateY(50px) rotateX(4deg);
   }
 }
@@ -1549,9 +1450,7 @@ body {
   .scroll-reveal,
   .scroll-visible,
   .project-card,
-  .skill-card,
-  .experience-content,
-  .education-card {
+  .skill-card {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
