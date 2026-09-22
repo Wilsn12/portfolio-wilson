@@ -1508,6 +1508,7 @@ body {
     overflow: visible;
     text-align: center;
     transform: none !important;
+    margin-top: 100px;
   }
 
   .footer-content,
