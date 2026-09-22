@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Preloader({ onFinish }) {
+function Preloader({ onFinish = () => {} }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
