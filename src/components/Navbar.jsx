@@ -16,7 +16,7 @@ function Navbar() {
         <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
       </div>
 
-      <a href="#" className="cv-button">
+      <a href="https://drive.google.com/file/d/1Gv-bYnoxMDOjRCtGUDXOl-4TqVfY2nA7/view?usp=sharing" className="cv-button">
         Download CV
       </a>
 

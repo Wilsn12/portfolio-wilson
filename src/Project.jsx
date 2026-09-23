@@ -3,6 +3,7 @@ import sobatilmuImage from "./assets/sobatilmu.png";
 import gorentImage from "./assets/gorent.png";
 import planningImage from "./assets/Planning.png";
 import primaryImage from "./assets/Primary (1).png";
+import cvImage from "./assets/cvweb.png";
 const projects = [
   {
     title: "Son Lab",
@@ -43,6 +44,14 @@ const projects = [
     technologies: ["HTML", "CSS", "PHP", "Laravel", "MySQL", "JavaScript"],
     image: primaryImage,
     link: "https://github.com/Wilsn12/Program-Pengambilan-Keputusan-Beasiswa"
+  },
+   {
+    title: "CVForge",
+    description: 
+        "CVForge is a web-based CV builder that helps users create professional and ATS-friendly CVs with customizable templates, live previews, and easy editing.",
+    technologies: ["ReactJS", "Java", "Spring Boot", "Maven"],
+    image: cvImage,
+    link: "https://wilsn12.github.io/CVForge/"
   },
 ];
 
