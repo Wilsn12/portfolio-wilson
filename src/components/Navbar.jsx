@@ -14,9 +14,22 @@ function Navbar() {
         <a href="#about" onClick={() => setIsOpen(false)}>About</a>
         <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
         <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+
+        <a
+          href="https://drive.google.com/file/d/1Gv-bYnoxMDOjRCtGUDXOl-4TqVfY2nA7/view?usp=sharing"
+          className="mobile-cv-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setIsOpen(false)}
+        >
+          Download CV
+        </a>
       </div>
 
-      <a href="https://drive.google.com/file/d/1Gv-bYnoxMDOjRCtGUDXOl-4TqVfY2nA7/view?usp=sharing" className="cv-button">
+      <a
+        href="https://drive.google.com/file/d/1Gv-bYnoxMDOjRCtGUDXOl-4TqVfY2nA7/view?usp=sharing"
+        className="cv-button"
+      >
         Download CV
       </a>
 
