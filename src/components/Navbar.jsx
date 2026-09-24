@@ -1,5 +1,4 @@
 import { useState } from "react";
-import cvFile from "./assets/ATS_Wilson_Tanjaya.pdf"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +16,7 @@ function Navbar() {
         <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
 
         <a
-          href={cvFile}
+          href={`${import.meta.env.BASE_URL}ATS_Wilson_Tanjaya_CV.pdf`}
           download="CV-Wilson-Tanjaya.pdf"
           className="mobile-cv-button"
           onClick={() => setIsOpen(false)}
@@ -27,7 +26,7 @@ function Navbar() {
       </div>
 
       <a
-        href={cvFile}
+        href={`${import.meta.env.BASE_URL}ATS_Wilson_Tanjaya_CV.pdf`}
         download="CV-Wilson-Tanjaya.pdf"
         className="cv-button"
       >
